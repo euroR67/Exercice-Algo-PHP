@@ -8,25 +8,27 @@ de validation (submit).
 <h2>Résulat:</h2>
 
 <?php
+
+    // Tableau données personnelles
     $champText = array(
         "nom",
         "prenom",
         "adresse e-mail",
         "ville",
     );
-
+    // Tableau sexe
     $radioSexe = array(
         "Masculin",
         "Féminin",
         "Hélicoptère de combat"
     );
-
+    // Tableau choix formation
     $selectFormation = array(
         "Développeur Logiciel",
         "Designer web",
         "Chef de projet"
     );
-
+    // Fonction pour généré est afficher les élément du tableau 1
     function afficherChampText($champText){
         echo '<form action="get">';
 
@@ -35,12 +37,15 @@ de validation (submit).
         }
         echo '</form>';
     }
-
+    
+    // Fonction pour généré est afficher les élément du tableau 2
     function afficherRadioSexe($radioSexe){
         foreach($radioSexe as $radioSexe){
             echo '<input type="radio">' . '<label>' . $radioSexe . '</label>' . '<br/>';
         }
     }
+
+    // Fonction pour généré est afficher les élément du tableau 3
     function afficherSelectFormation($selectFormation){
         echo '<select name="civile">';
 
@@ -50,7 +55,7 @@ de validation (submit).
 
         echo '</select>';
     }
-
+    // Execution des fonctions est création boutton validation
     afficherChampText($champText);
     afficherRadioSexe($radioSexe);
     afficherSelectFormation($selectFormation);

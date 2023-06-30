@@ -17,7 +17,7 @@ $capitales = array(
     "Allemagne" => "Berlin",
     "USA" => "Washington",
     "Italie" => "Rome"
-);
+);  // Tableau des liens wikipédia des capitales
 $wiki = array(
     "Paris" => '<a href="https://fr.wikipedia.org/wiki/Paris">Lien</a>',
     "Berlin" => '<a href="https://fr.wikipedia.org/wiki/Berlin">Lien</a>',
@@ -26,13 +26,13 @@ $wiki = array(
 );
 
 function afficherTableHTML($capitales, $wiki) {
-    // Trier le tableau par clé (nom du pays) en ordre alphabétique
+    // Trier les tableau par clé (nom du pays) et (lien en rapport avec les capital) en ordre alphabétique
     ksort($capitales);
     ksort($wiki);
 
     echo '<table style="border : 1px solid black">';
     echo '<tr><th>Pays</th><th>Capitale</th><th>Lien wiki</th></tr>';
-
+    // Boucle pour afficher chaque élèment des tableaux
     foreach ($capitales as $pays => $capitale) {
         echo '<tr><td>' . strtoupper($pays) . '</td><td>' . $capitale . '</td><td>' . $wiki[$capitale] . '</td></tr>';
     }

@@ -4,5 +4,5 @@ dans un nouvel onglet (_blank).</p>
 <h2>Résulat:</h2>
 
 <?php
-
+// Ouvrir un lien dans un nouvelle onglet (_blank)
 echo '<a target="_blank" href="https://elan-formation.eu/accueil">Elan formation</a>';

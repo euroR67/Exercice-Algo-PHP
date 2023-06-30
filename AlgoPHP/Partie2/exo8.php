@@ -7,11 +7,13 @@ repeterImage($url,4);
 <h2>Résulat:</h2>
 
 <?php
-
+    // stockage d'url dans une variable
     $url = 'http://my.mobirise.com/data/userpic/764.jpg';
-
+    
+    // Fonction permettant de répétez une image
     function repeterImage($url){
         echo str_repeat('<img src="' . $url . '">', 4);
     }
 
+    // Appel de la fonction
     repeterImage($url);

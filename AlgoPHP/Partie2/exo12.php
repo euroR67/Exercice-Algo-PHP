@@ -8,7 +8,7 @@ A l’aide d’une boucle, afficher les informations des variables contenues dan
 <h2>Résulat:</h2>
 
 <?php
-
+// Tableau de différents valeurs
 $tableauValeurs = array(
     true,
     "texte",
@@ -16,8 +16,9 @@ $tableauValeurs = array(
     25.369,
     array("valeur1","valeur2")
 );
-
+// Boucle permettant d'afficher les informations d'une variable
 foreach ($tableauValeurs as $valeur) {
+    // Methode permettant de connaitre les informations d'une variable
     var_dump($valeur);
     echo "<br>";
 }

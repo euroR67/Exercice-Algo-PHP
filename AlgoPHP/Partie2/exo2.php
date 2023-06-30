@@ -21,7 +21,7 @@ function afficherTableHTML($capitales) {
 
     echo '<table>';
     echo '<tr><th>Pays</th><th>Capitale</th></tr>';
-
+    // Boucle foreach pour afficher le contenu html approprié pour chaque élèment du tableau
     foreach ($capitales as $pays => $capitale) {
         echo '<tr><td>' . strtoupper($pays) . '</td><td>' . $capitale . '</td></tr>';
     }

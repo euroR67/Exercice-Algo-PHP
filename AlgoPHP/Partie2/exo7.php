@@ -23,16 +23,25 @@ genererCheckbox($elements);<br/>
 
     // ----------------- VARIANTE 2 --------------------
 
+    // Tableau de choix est leur état
     $elements = array(
-        'checkbox1' => "Choix 1",
-        'checkbox2' => "Choix 2",
-        'checkbox3' => "Choix 3"
+        "Choix 1" => true,
+        "Choix 2" => false,
+        "Choix 3" => false 
     );
-    
+    // Fonction qui génère des checkbox avec comme état active pour le premier checkbox
     function genererCheckbox($elements) {
-        foreach ($elements as $checkbox => $choix) {
-            echo '<input type="checkbox" name="' . $checkbox . '">' . $choix . '<br/>';
+        // Boucle pour afficher les checkbox du tableau
+        foreach ($elements as $choix => $etat) {
+            // Vérification de l'état des checkbox
+            if ($etat == true) {
+                $checked = "checked";
+            } else {
+                $checked = "";
+            }
+            echo  '<input type="checkbox"  value='.$choix.' '.$checked.'>
+            <label>'.$choix.'</label>'.'<br>';
         }
     }
-    
-    genererCheckbox($elements);    
+    // Appel de la fonction
+    genererCheckbox($elements);

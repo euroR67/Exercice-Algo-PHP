@@ -6,16 +6,16 @@ $nomsInput = array("Nom","Prénom","Ville");<br/>
 afficherInput($nomsInput);</p>
 <h2>Résulat:</h2>
 <?php
-
+    // Tableau info personne
     $nomsInput = array("Nom", "Prénom", "Ville");
-
+    // Fonction afficher formulaire
     function afficherInput($nomInput){
         echo '<form action="get">';
-
+        // Boucle pour afficher chaque element du tableau sous forme de formulaire
         foreach($nomInput as $nomInput) {
             echo '<label for="name">' . ($nomInput) . '<br/>' . '<input type="text">' . '<br/>';
         }
         echo '</form>';
     }
-
+    // Appel de la fonction
     afficherInput($nomsInput);
